@@ -1,0 +1,3 @@
+function checkDateBirth(){
+    alert('run');
+}
