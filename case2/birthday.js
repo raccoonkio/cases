@@ -36,9 +36,11 @@ function birthInStars(){
     };
     let result = '';
     for (let i = 0; i < 5; i++){
-        let resultStr = '';
+        let resultStr = 0;
         for (let j = 0; j < dateSrt.length; j++){
-        resultStr = resultStr + numStars[dateSrt[j]][i] + ' ' ;
+        resultStr += numStars[dateSrt[j]][i] + ' ' ;
+        console.log(numStars[dateSrt[j]][i]);
+        console.log(resultStr);
         }
         result = result + resultStr + '\r\n';
     }
@@ -53,8 +55,11 @@ function runCheckDateBirth(){
     dateBirth =  new Date (year, month - 1, day);
     monthOfBirth = new Date(year, month, 0);
 
-    if (day === '' || month === '' || year === '' || day === NaN || month === NaN || year === NaN ){
-        document.getElementById('result').innerHTML = 'поля ввода не должны быть пустыми и могут содержать только числа';
+    console.log(Boolean(day));
+
+    if (Boolean(day) == false || Boolean(month) == false || Boolean(year) == false || day === NaN || month === NaN || year === NaN ){
+        document.getElementById('result').innerHTML = 'поля ввода не должны быть пустыми и могут содержать только целые числа больше нуля';
+       console.log('stop');
     } else if ( dateBirth > currentDate ) {
         document.getElementById('result').innerHTML = 'дата дня рождения не может превышать текущую дату';
     } else if ( day > monthOfBirth.getDate() ) {
