@@ -1,0 +1,35 @@
+* {
+    margin: 0; /* обнуляем внешние отступы */
+    padding: 0; /* обнуляем внутренние отступы */
+    outline: 0; /* обнуляем толщину внешней границы */
+}
+body{
+    background-color: #000000;
+}
+#slider{
+    position: relative;
+} 
+.slider-nav{
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    z-index: 2;
+
+}
+.slider-items .item{
+    opacity: 0;
+}
+.slider-items .item.active-slid{
+    opacity: 1;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.slider-items img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
