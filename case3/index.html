@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Слайдер</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Слайдер изображений</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="slider">
-        <div class="slider-items">
-            <img  class="item active-slid" src="image/arkii-pop-landsaftnyi-dizain.jpg">
-            <img class="item next-slid" src="/fon-produkta-prirody-ferma-i-solnecnyi-svet.jpg">
-            <img class="item" src="/gory-vestrahorn-v-stokksnese-islandia.jpg">
-            <img class="item" src="/krasivyi-peizaz-pola-v-okruzenii-holmov-v-sel-skoi-mestnosti.jpg">
-            <img class="item" src="/krasivyi-snimok-dolomita-s-gorami-i-derev-ami-pod-golubym-nebom-v-italii.jpg">
-            <img class="item" src="/vertikal-nyi-vozdusnyi-vystrel-iz-morskih-voln-porazausih-skaly.jpg">
-            <img class="item" src="/vid-na-krasivye-razmytye-cvety.jpg">
-            <img class="item" src="/vlaznye-list-a-rastenia-monstera-deliciosa-v-sadu.jpg">
-            <img class="item" src="/voshod.jpg">
-            <img class="item prev-slid" src="/zabavnaa-vecerinka-s-didzeem.jpg">
-        </div>
-        <div class="slider-nav">
-            <div class="btn btn-prev"><</div>
-            <div class="btn btn-next">></div>
-        </div>
-    </section>
+
+<div class="slider">
+  <div class="slides">
+    <div class="item active-slid"><img src="image/arkii-pop-landsaftnyi-dizain.jpg" alt=""></div>
+    <div class="item next-slid"><img src="image/fon-produkta-prirody-ferma-i-solnecnyi-svet.jpg" alt=""></div>
+    <div class="item"><img src="image/gory-vestrahorn-v-stokksnese-islandia.jpg" alt=""></div>
+    <div class="item"><img src="image/krasivyi-peizaz-pola-v-okruzenii-holmov-v-sel-skoi-mestnosti.jpg" alt=""></div>
+    <div class="item"><img src="image/krasivyi-snimok-dolomita-s-gorami-i-derev-ami-pod-golubym-nebom-v-italii.jpg" alt=""></div>
+    <div class="item"><img src="image/vertikal-nyi-vozdusnyi-vystrel-iz-morskih-voln-porazausih-skaly.jpg" alt=""></div>
+    <div class="item"><img src="image/vid-na-krasivye-razmytye-cvety.jpg" alt=""></div>
+    <div class="item"><img src="image/vlaznye-list-a-rastenia-monstera-deliciosa-v-sadu.jpg" alt=""></div>
+    <div class="item prev-slid"><img src="image/voshod.jpg" alt=""></div>
+  </div>
+
+  <div class="nav">
+    <button id="prev">❮</button>
+    <button id="next">❯</button>
+  </div>
+
+  <div class="counter" id="counter">Изображение 1 из 10</div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

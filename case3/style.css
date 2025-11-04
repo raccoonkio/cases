@@ -1,35 +1,70 @@
-* {
-    margin: 0; /* обнуляем внешние отступы */
-    padding: 0; /* обнуляем внутренние отступы */
-    outline: 0; /* обнуляем толщину внешней границы */
-}
-body{
-    background-color: #000000;
-}
-#slider{
-    position: relative;
-} 
-.slider-nav{
-    position: absolute;
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f4f4;
     display: flex;
-    gap: 40px;
-    z-index: 2;
-
-}
-.slider-items .item{
-    opacity: 0;
-}
-.slider-items .item.active-slid{
-    opacity: 1;
-}
-.btn {
-    width: 40px;
-    height: 40px;
-    background-color: aliceblue;
-    border-radius: 50%;
-}
-.slider-items img {
-    width: 100vw;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+  }
+
+  .slider {
+    position: relative;
+    width: 800px;
+    max-width: 95%;
+    border: 3px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .item {
+    min-width: 100%;
+    user-select: none;
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-}
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .nav button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  .nav button:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .counter {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+  }
